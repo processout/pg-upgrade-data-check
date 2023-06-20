@@ -1,0 +1,5 @@
+---
+ tables:
+   users:
+     collect: select max(id) from %s limit 1;
+     compare: select id, md5(%s::TEXT) as hash from %s where id>=%d and id<=%d order by id asc;
