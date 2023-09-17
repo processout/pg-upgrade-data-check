@@ -28,6 +28,7 @@ func NewCompare(config *Config, afterFile string, sourceConn, targetConn *pgx.Co
 	}
 }
 
+//nolint:funlen // very complex logic to refactor
 func (c *Compare) Run(ctx context.Context) error {
 	log.Println("🏃 Comparing...")
 	if _, err := os.Stat(c.afterFile); errors.Is(err, os.ErrNotExist) {
