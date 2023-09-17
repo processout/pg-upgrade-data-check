@@ -1,5 +1,9 @@
 # pg-upgrade-data-check
 
+## Installing
+
+`go install github.com/processout/pg-upgrade-data-check@latest`
+
 ## Description
 
 `pg-upgrade-data-check` will compare Postgres table contents of two databases (source and target) to ensure there are no differences
