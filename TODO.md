@@ -1,3 +1,0 @@
-- Revamp documentation after refactor
-- Check if CLI command naming makes sense
-- Split commands from `main.go`
