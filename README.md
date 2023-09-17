@@ -2,7 +2,7 @@
 
 ## Installing
 
-`go install github.com/processout/pg-upgrade-data-check@latest`
+`go install github.com/processout/pg-upgrade-data-check@latest` or use one of the binaries available in https://github.com/processout/pg-upgrade-data-check/releases
 
 ## Description
 
