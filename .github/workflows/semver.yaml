@@ -13,7 +13,7 @@ jobs:
       version: ${{ steps.semrel.outputs.version  }}
       changelog: ${{ steps.semrel.outputs.changelog }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: go-semantic-release/action@v1.24.1
         id: semrel
