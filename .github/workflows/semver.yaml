@@ -15,8 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Mint App token
+        id: app-token
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 #v2
+        with:
+          app-id: ${{ vars.PO_PUBLIC_WRITE_APP_ID }}
+          private-key: ${{ secrets.PO_PUBLIC_WRITE_APP_KEY }}
+          owner: processout
+          repositories: pg-upgrade-data-check
+
       - uses: go-semantic-release/action@v1.24.1
         id: semrel
         with:
-          github-token: ${{ secrets.PO_GITHUB_TOKEN }}
+          github-token: ${{ steps.app-token.outputs.token }}
           force-bump-patch-version: true
