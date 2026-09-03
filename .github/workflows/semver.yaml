@@ -13,7 +13,7 @@ jobs:
       version: ${{ steps.semrel.outputs.version  }}
       changelog: ${{ steps.semrel.outputs.changelog }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Mint App token
         id: app-token
